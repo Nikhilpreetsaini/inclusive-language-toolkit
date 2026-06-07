@@ -83,3 +83,52 @@ Please ensure new code is tested and maintainers will review your contribution.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+## Python API Example
+
+You can also use the toolkit from within your own Python code without invoking the CLI. Here's an example:
+
+```python
+from inclusive_toolkit import make_inclusive, highlight_non_inclusive, get_stats, suggest_alternatives, analyze_sentiment
+
+text = "Hi guys! The chairman will speak soon."
+print("Original:", text)
+print("Inclusive:", make_inclusive(text))
+print("Highlighted:", highlight_non_inclusive(text))
+print("Stats:", get_stats(text))
+print("Suggestions:", suggest_alternatives(text))
+print("Sentiment score:", analyze_sentiment(text))
+```
+
+## Citation
+
+If you use this toolkit in your research or software, please cite it. Citation metadata is provided in [CITATION.cff](./CITATION.cff). Many tools and services, such as GitHub’s “Cite this repository” button, can automatically generate a citation based on this file.
+
+## Development and Contributing
+
+To set up a local development environment with quality checks, follow these steps:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Install development tools
+pip install pre-commit pytest
+
+# Set up pre-commit hooks
+pre-commit install
+
+# Run test suite
+pytest
+```
+
+When adding new features or fixes:
+
+1. Fork the repository and create a new branch from `main`.
+2. Make your changes, ensuring code is formatted (pre-commit hooks will help).
+3. Add or update tests to cover your changes.
+4. Commit with clear messages and push to your fork.
+5. Open a pull request describing what you’ve changed.
+
+For more details see [CONTRIBUTING.md](./CONTRIBUTING.md) and abide by our [Code of Conduct](./CODE_OF_CONDUCT.md).
